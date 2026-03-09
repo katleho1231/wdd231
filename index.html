@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>WDD231 Course Home Page</title>
 
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Course homepage for WDD231 showing completed courses and credits.">
+<meta name="author" content="Katleho">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<script src="scripts/script.js" defer></script>
 
 </head>
 
 <body>
 
 <header>
-<h1>Katleho | WDD231</h1>
+<h1>WDD231 Course Home Page</h1>
+</header>
 
 <nav>
-<button onclick="filterCourses('all')">All</button>
-<button onclick="filterCourses('CSE')">CSE</button>
-<button onclick="filterCourses('WDD')">WDD</button>
-</nav>
 
-</header>
+<a href="#">Home</a>
+<a href="#">Chamber</a>
+<a href="#">Final Project</a>
+<a href="https://www.linkedin.com">LinkedIn</a>
+
+</nav>
 
 <main>
 
-<h2>Course List</h2>
+<section>
 
-<div id="courses"></div>
+<h2>About Me</h2>
 
-<p>Total Credits: <span id="credits"></span></p>
+<p>
+My name is Katleho. This is my WDD231 homepage where I will display my coursework and track my credits.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Course Work</h2>
+
+<ul id="courseList">
+
+<li>CSE210</li>
+<li>WDD130</li>
+<li>WDD231</li>
+
+</ul>
+
+</section>
+
+
+<section>
+
+<h2>Total Credits</h2>
+
+<p>Total Credits Completed: <span id="credits"></span></p>
+
+</section>
 
 </main>
 
 <footer>
 
-<p>© <span id="year"></span> Katleho</p>
-<p>Last Modified: <span id="modified"></span></p>
+<p>© 2026 Katleho</p>
 
 </footer>
 
-<script src="script.js"></script>
-
 </body>
+
 </html>
