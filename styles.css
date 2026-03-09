@@ -1,0 +1,39 @@
+body {
+font-family: Arial;
+margin: 0;
+text-align: center;
+}
+
+header {
+background: #333;
+color: white;
+padding: 1rem;
+}
+
+nav button {
+margin: 5px;
+padding: 10px;
+}
+
+#courses {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 10px;
+padding: 20px;
+}
+
+.course {
+border: 1px solid #ccc;
+padding: 10px;
+}
+
+.completed {
+background: lightgreen;
+}
+
+footer {
+background: #333;
+color: white;
+padding: 10px;
+margin-top: 20px;
+}
