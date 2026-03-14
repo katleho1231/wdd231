@@ -1,0 +1,7 @@
+@media (min-width:768px){
+
+#members{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
