@@ -1,63 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title and Meta -->
+    <title>Johannesburg Chamber Directory of Local Businesses</title>
+    <meta name="description" content="Discover and connect with trusted businesses in the Johannesburg Chamber of Commerce directory. Find services, contact details, and more.">
+    <meta name="author" content="Katleho Selwana">
 
-<title>Chamber Directory</title>
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Johannesburg Chamber Directory of Local Businesses">
+    <meta property="og:description" content="Discover and connect with trusted businesses in the Johannesburg Chamber of Commerce directory. Find services, contact details, and more.">
+    <meta property="og:image" content="https://katleho1231.github.io/wdd231/chamber/images/chamber.jpg">
+    <meta property="og:url" content="https://katleho1231.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
 
-<meta name="description" content="Johannesburg Chamber business directory">
-<meta name="author" content="Katleho Selwana">
+    <!-- Favicon -->
+    <link rel="icon" href="images/chamber-favicon.ico" type="image/x-icon">
 
-<link rel="icon" href="images/favicon.ico">
-
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-
-<script src="scripts/directory.js" defer></script>
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Johannesburg Chamber Directory</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<header>
-<h1>Johannesburg Chamber of Commerce</h1>
-</header>
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Member Directory</h2>
 
-<nav>
+            <!-- Layout Toggle Buttons -->
+            <div id="layout-buttons">
+                <button id="grid-view">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
 
-<a href="../index.html">Home</a>
-<a href="directory.html">Directory</a>
-<a href="#">Join</a>
-<a href="#">Contact</a>
+            <!-- Container for Members -->
+            <div id="members-container" class="grid"></div>
+        </section>
+    </main>
 
-</nav>
+    <!-- Footer -->
+    <footer>
+        <p>Johannesburg Chamber of Commerce | WDD 231 | &copy; <span id="year"></span></p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
 
-<main>
+    <!-- JSON Data Folder -->
+    <script>
+        const membersContainer = document.getElementById('members-container');
+        const gridBtn = document.getElementById('grid-view');
+        const listBtn = document.getElementById('list-view');
 
-<h2>Member Directory</h2>
+        // Fetch member JSON data
+        async function loadMembers() {
+            try {
+                const response = await fetch('data/members.json');
+                const members = await response.json();
+                displayMembers(members);
+            } catch (error) {
+                membersContainer.innerHTML = '<p>Error loading members.</p>';
+                console.error(error);
+            }
+        }
 
-<button id="grid">Grid</button>
-<button id="list">List</button>
+        // Display members
+        function displayMembers(members) {
+            membersContainer.innerHTML = '';
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                card.innerHTML = `
+                    <img src="images/${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                    <p>Membership Level: ${member.membership}</p>
+                `;
+                membersContainer.appendChild(card);
+            });
+        }
 
-<section id="members"></section>
+        // Layout toggle
+        gridBtn.addEventListener('click', () => {
+            membersContainer.className = 'grid';
+        });
+        listBtn.addEventListener('click', () => {
+            membersContainer.className = 'list';
+        });
 
-</main>
+        // Display year and last modified
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
 
-<footer>
-
-<p>Contact: info@chamber.org</p>
-
-<p>Katleho Selwana | WDD231</p>
-
-<p>© <span id="year"></span></p>
-
-<p>Last Modified: <span id="modified"></span></p>
-
-</footer>
-
+        loadMembers();
+    </script>
 </body>
 </html>
