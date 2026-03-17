@@ -1,58 +1,54 @@
-[
+{
+"members":[
+
 {
 "name":"Tech Solutions",
-"address":"123 Main Street",
-"phone":"555-1234",
-"website":"https://example.com",
-"image":"tech.jpg",
-"membership":3
+"address":"123 Sandton Drive",
+"phone":"011 123 4567",
+"website":"https://example.com"
 },
+
 {
-"name":"City Cafe",
-"address":"45 Market Road",
-"phone":"555-2345",
-"website":"https://example.com",
-"image":"cafe.jpg",
-"membership":2
+"name":"Joburg Foods",
+"address":"45 Market Street",
+"phone":"011 555 8899",
+"website":"https://example.com"
 },
+
 {
-"name":"Green Energy",
-"address":"78 Solar Ave",
-"phone":"555-3456",
-"website":"https://example.com",
-"image":"energy.jpg",
-"membership":3
+"name":"Metro Logistics",
+"address":"77 Industrial Rd",
+"phone":"011 987 1111",
+"website":"https://example.com"
 },
+
 {
-"name":"Urban Fitness",
-"address":"12 Gym Street",
-"phone":"555-4567",
-"website":"https://example.com",
-"image":"fitness.jpg",
-"membership":1
+"name":"Green Energy SA",
+"address":"88 Eco Ave",
+"phone":"011 444 2222",
+"website":"https://example.com"
 },
+
 {
-"name":"Auto World",
-"address":"9 Motor Lane",
-"phone":"555-5678",
-"website":"https://example.com",
-"image":"auto.jpg",
-"membership":2
+"name":"City Marketing",
+"address":"12 Nelson Mandela Sq",
+"phone":"011 333 9999",
+"website":"https://example.com"
 },
+
 {
-"name":"Creative Design",
-"address":"21 Art Road",
-"phone":"555-6789",
-"website":"https://example.com",
-"image":"design.jpg",
-"membership":1
+"name":"Urban Builders",
+"address":"90 Rivonia Rd",
+"phone":"011 888 7777",
+"website":"https://example.com"
 },
+
 {
-"name":"Fresh Market",
-"address":"77 Food Street",
-"phone":"555-7890",
-"website":"https://example.com",
-"image":"market.jpg",
-"membership":3
+"name":"Digital Hub",
+"address":"55 Innovation St",
+"phone":"011 666 4444",
+"website":"https://example.com"
 }
+
 ]
+}
