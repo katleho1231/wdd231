@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: blue;
+  color: white;
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+}

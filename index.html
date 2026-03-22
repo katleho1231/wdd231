@@ -1,87 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Home Page">
+  <title>Chamber Home</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>WDD231 Course Home Page</title>
-
-<meta name="description" content="Course homepage for WDD231 showing completed courses and credits.">
-<meta name="author" content="Katleho">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/larger.css">
-
-<script src="scripts/script.js" defer></script>
-
+  <!-- REQUIRED -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
 
 <header>
-<h1>WDD231 Course Home Page</h1>
+  <h1>Chamber of Commerce</h1>
 </header>
 
 <nav>
-
-<a href="#">Home</a>
-<a href="#">Chamber</a>
-<a href="#">Final Project</a>
-<a href="https://www.linkedin.com">LinkedIn</a>
-
+  <a href="index.html" class="active">Home</a>
+  <a href="directory.html">Directory</a>
+  <a href="join.html">Join</a>
 </nav>
 
 <main>
 
-<section>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="City view">
+    <a href="join.html" class="cta">Join the Chamber</a>
+  </section>
 
-<h2>About Me</h2>
+  <!-- EVENTS -->
+  <section>
+    <h2>Events</h2>
+    <p>Business Meetup - March 25</p>
+    <p>Startup Workshop - March 28</p>
+  </section>
 
-<p>
-My name is Katleho. This is my WDD231 homepage where I will display my coursework and track my credits.
-</p>
+  <!-- WEATHER -->
+  <section>
+    <h2>Weather</h2>
+    <p id="temp"></p>
+    <p id="desc"></p>
+    <div id="forecast"></div>
+  </section>
 
-</section>
-
-
-<section>
-
-<h2>Course Work</h2>
-
-<ul id="courseList">
-
-<li>CSE210</li>
-<li>WDD130</li>
-<li>WDD231</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Total Credits</h2>
-
-<p>Total Credits Completed: <span id="credits"></span></p>
-
-</section>
+  <!-- SPOTLIGHT -->
+  <section>
+    <h2>Spotlights</h2>
+    <div id="spotlight-container"></div>
+  </section>
 
 </main>
 
 <footer>
-
-<p>© 2026 Katleho</p>
-
+  <p>&copy; 2026 Chamber</p>
 </footer>
 
-</body>
+<script src="scripts/weather.js"></script>
+<script src="scripts/spotlight.js"></script>
 
+</body>
 </html>
