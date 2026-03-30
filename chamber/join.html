@@ -4,8 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Join - Johannesburg Chamber</title>
-<meta name="description" content="Join the Johannesburg Chamber of Commerce today.">
+<title>Join Johannesburg Chamber of Commerce</title>
+
+<meta name="description" content="Apply to join the Johannesburg Chamber of Commerce and grow your business network, access events, and gain valuable exposure.">
+<meta name="author" content="Katleho Selwana">
+
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Join Johannesburg Chamber of Commerce Today">
+<meta property="og:description" content="Become a member of the Johannesburg Chamber and unlock business opportunities, networking events, and growth.">
+<meta property="og:image" content="https://katleho1231.github.io/wdd231/chamber/images/city-view.png">
+<meta property="og:url" content="https://katleho1231.github.io/wdd231/chamber/join.html">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/chamber.css">
@@ -59,13 +74,12 @@
         autocomplete="organization">
     </label>
 
-    <!-- MEMBERSHIP -->
     <label>Membership Level
       <select name="membership">
         <option value="np">NP Membership</option>
-        <option value="bronze">Bronze</option>
-        <option value="silver">Silver</option>
-        <option value="gold">Gold</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
       </select>
     </label>
 
@@ -73,7 +87,7 @@
       <textarea name="description" title="Business description"></textarea>
     </label>
 
-    <!-- TIMESTAMP -->
+    <!-- Hidden timestamp -->
     <input type="hidden" name="timestamp" id="timestamp">
 
     <input type="submit" value="Apply Now">
@@ -85,22 +99,22 @@
 
     <div class="card">
       <h3>NP Membership</h3>
-      <button onclick="openModal('npModal')">View Benefits</button>
+      <button data-modal="npModal">View Benefits</button>
     </div>
 
     <div class="card">
-      <h3>Bronze</h3>
-      <button onclick="openModal('bronzeModal')">View Benefits</button>
+      <h3>Bronze Membership</h3>
+      <button data-modal="bronzeModal">View Benefits</button>
     </div>
 
     <div class="card">
-      <h3>Silver</h3>
-      <button onclick="openModal('silverModal')">View Benefits</button>
+      <h3>Silver Membership</h3>
+      <button data-modal="silverModal">View Benefits</button>
     </div>
 
     <div class="card">
-      <h3>Gold</h3>
-      <button onclick="openModal('goldModal')">View Benefits</button>
+      <h3>Gold Membership</h3>
+      <button data-modal="goldModal">View Benefits</button>
     </div>
 
   </section>
@@ -109,24 +123,28 @@
 
 <!-- MODALS -->
 <dialog id="npModal">
-  <p>Free membership for nonprofits</p>
-  <button onclick="closeModal('npModal')">Close</button>
+  <p>Free membership for nonprofit organizations.</p>
+  <button>Close</button>
 </dialog>
 
 <dialog id="bronzeModal">
-  <p>Basic advertising benefits</p>
-  <button onclick="closeModal('bronzeModal')">Close</button>
+  <p>Basic advertising and listing benefits.</p>
+  <button>Close</button>
 </dialog>
 
 <dialog id="silverModal">
-  <p>Event discounts + promotions</p>
-  <button onclick="closeModal('silverModal')">Close</button>
+  <p>Includes event discounts and promotions.</p>
+  <button>Close</button>
 </dialog>
 
 <dialog id="goldModal">
-  <p>Premium spotlight + training access</p>
-  <button onclick="closeModal('goldModal')">Close</button>
+  <p>Premium spotlight advertising and training access.</p>
+  <button>Close</button>
 </dialog>
+
+<footer>
+  <p>&copy; 2026 Johannesburg Chamber | Katleho Selwana</p>
+</footer>
 
 </body>
 </html>
