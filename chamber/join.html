@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Join - Johannesburg Chamber</title>
+<meta name="description" content="Join the Johannesburg Chamber of Commerce today.">
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/chamber.css">
+
+<script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Johannesburg Chamber</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+  </nav>
+</header>
+
+<main class="join-container">
+
+  <!-- FORM -->
+  <form method="get" action="thankyou.html">
+
+    <label>First Name
+      <input type="text" name="fname" required title="Enter first name" autocomplete="given-name">
+    </label>
+
+    <label>Last Name
+      <input type="text" name="lname" required title="Enter last name" autocomplete="family-name">
+    </label>
+
+    <label>Organization Title
+      <input type="text" name="orgtitle" title="Enter at least 7 characters"
+        autocomplete="organization-title"
+        pattern="[A-Za-z\\-\\s]{7,}">
+    </label>
+
+    <label>Email
+      <input type="email" name="email" required title="Enter email"
+        autocomplete="email"
+        placeholder="example@email.com">
+    </label>
+
+    <label>Phone
+      <input type="tel" name="phone" required title="Enter phone"
+        autocomplete="tel">
+    </label>
+
+    <label>Business Name
+      <input type="text" name="business" required title="Business name"
+        autocomplete="organization">
+    </label>
+
+    <!-- MEMBERSHIP -->
+    <label>Membership Level
+      <select name="membership">
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+      </select>
+    </label>
+
+    <label>Description
+      <textarea name="description" title="Business description"></textarea>
+    </label>
+
+    <!-- TIMESTAMP -->
+    <input type="hidden" name="timestamp" id="timestamp">
+
+    <input type="submit" value="Apply Now">
+
+  </form>
+
+  <!-- MEMBERSHIP CARDS -->
+  <section class="cards">
+
+    <div class="card">
+      <h3>NP Membership</h3>
+      <button onclick="openModal('npModal')">View Benefits</button>
+    </div>
+
+    <div class="card">
+      <h3>Bronze</h3>
+      <button onclick="openModal('bronzeModal')">View Benefits</button>
+    </div>
+
+    <div class="card">
+      <h3>Silver</h3>
+      <button onclick="openModal('silverModal')">View Benefits</button>
+    </div>
+
+    <div class="card">
+      <h3>Gold</h3>
+      <button onclick="openModal('goldModal')">View Benefits</button>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- MODALS -->
+<dialog id="npModal">
+  <p>Free membership for nonprofits</p>
+  <button onclick="closeModal('npModal')">Close</button>
+</dialog>
+
+<dialog id="bronzeModal">
+  <p>Basic advertising benefits</p>
+  <button onclick="closeModal('bronzeModal')">Close</button>
+</dialog>
+
+<dialog id="silverModal">
+  <p>Event discounts + promotions</p>
+  <button onclick="closeModal('silverModal')">Close</button>
+</dialog>
+
+<dialog id="goldModal">
+  <p>Premium spotlight + training access</p>
+  <button onclick="closeModal('goldModal')">Close</button>
+</dialog>
+
+</body>
+</html>
