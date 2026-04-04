@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    gap: 1rem;
+    background: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MESSAGE */
+#visitMessage {
+    padding: 1rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+/* GRID BASE */
+#cards {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* CARD */
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* ✅ SMALL (mobile) */
+@media (max-width: 640px) {
+    #cards {
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f"
+            "g"
+            "h";
+    }
+}
+
+/* ✅ MEDIUM */
+@media (min-width: 641px) {
+    #cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g h";
+    }
+}
+
+/* ✅ LARGE */
+@media (min-width: 1025px) {
+    #cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a b c d"
+            "e f g h";
+    }
+
+    /* HOVER EFFECT ONLY DESKTOP */
+    .card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        transition: 0.3s;
+    }
+}
