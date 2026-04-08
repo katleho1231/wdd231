@@ -1,84 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* NAV */
-nav {
- background-color: #333;
+/* SMALL */
+.grid-container {
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
 }
 
-nav a {
-  color: white; /* FIX */
-}
-
-
-
-/* MESSAGE */
-#visitMessage {
-    padding: 1rem;
-    background: #f4f4f4;
-    text-align: center;
-}
-
-/* GRID BASE */
-#cards {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-/* CARD */
-.card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background: white;
-}
-
-.card img {
-    width: 100%;
-}
-
-/* ✅ SMALL (mobile) */
-@media (max-width: 640px) {
-    #cards {
-        grid-template-areas:
-            "a"
-            "b"
-            "c"
-            "d"
-            "e"
-            "f"
-            "g"
-            "h";
-    }
-}
-
-/* ✅ MEDIUM */
+/* MEDIUM */
 @media (min-width: 641px) {
-    #cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "a b"
-            "c d"
-            "e f"
-            "g h";
-    }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+  }
 }
 
-/* ✅ LARGE */
+/* LARGE */
 @media (min-width: 1025px) {
-    #cards {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "a b c d"
-            "e f g h";
-    }
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a b c d"
+      "e f g h";
+  }
+}
 
-    /* HOVER EFFECT ONLY DESKTOP */
-    .card img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-        transition: 0.3s;
-    }
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* HOVER EFFECT (NOT MOBILE) */
+@media (min-width: 641px) {
+  .card img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
