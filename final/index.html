@@ -1,104 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="images/favicon.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amapiano Hub | Discover Music</title>
+
+<meta name="description" content="Discover trending Amapiano songs, artists, and playlists in South Africa.">
+<meta name="author" content="Katleho Selwana">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Amapiano Hub - Discover Music">
-<meta property="og:description" content="Explore trending Amapiano songs and artists in South Africa.">
-<meta property="og:image" content="https://katleho1231.github.io/wdd231/final/images/amapiano.jpg">
-<meta property="og:url" content="https://katleho1231.github.io/wdd231/final/">
+<meta property="og:description" content="Explore the best Amapiano songs and artists.">
+<meta property="og:image" content="https://katleho1231.github.io/wdd231/final/images/logo.png">
+<meta property="og:url" content="https://katleho1231.github.io/wdd231/final/index.html">
 
-  <link rel="stylesheet" href="styles/styles.css">
-  <script type="module" src="scripts/main.js"></script>
-  <link rel="icon" href="images/favicon.png">
+<!-- Favicon -->
+<link rel="icon" href="images/kasi.webp">
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+<!-- CSS -->
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/large.css">
 
+<!-- JS -->
+<script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
 
 <header>
-  <h1>Amapiano Hub 🎧</h1>
+<h1>Amapiano Hub 🎧</h1>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="songs.html">Songs</a>
-    <a href="artists.html">Artists</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<button id="menuBtn">☰</button>
+
+<nav id="navMenu">
+<a href="index.html">Home</a>
+<a href="songs.html">Songs</a>
+<a href="artists.html">Artists</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <main>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h2>Welcome to Amapiano Hub</h2>
-  <p>Your home for the hottest Amapiano music 🔥</p>
-  <button onclick="window.location.href='songs.html'">Explore Songs</button>
-</section>
-
-<!-- ABOUT SECTION -->
-<section class="about">
-  <h2>About Amapiano</h2>
-  <p>
-    Amapiano is a South African music genre that blends deep house, jazz, and lounge music.
-    It has taken over the world with its unique sound and dance culture.
-  </p>
-</section>
-
-<!-- TRENDING SONGS -->
 <section>
-  <h2>🔥 Trending Songs</h2>
-  <div id="songs-container"></div>
+<h2>Welcome</h2>
+<p>Discover the hottest Amapiano tracks and artists.</p>
+<img src="images/kasi.webp" alt="Amapiano music logo" width="200" loading="lazy">
 </section>
 
-<!-- FEATURED ARTISTS -->
-<section class="artists">
-  <h2>🌟 Featured Artists</h2>
-
-  <div class="artist-cards">
-    <div class="artist">
-      <h3>Kabza De Small</h3>
-      <p>King of Amapiano</p>
-    </div>
-
-    <div class="artist">
-      <h3>DJ Maphorisa</h3>
-      <p>Scorpion Kings</p>
-    </div>
-
-    <div class="artist">
-      <h3>Young Stunna</h3>
-      <p>Rising Star</p>
-    </div>
-  </div>
+<section>
+<h2>Trending Songs</h2>
+<div id="songsContainer"></div>
 </section>
 
-<!-- WHY SECTION -->
-<section class="why">
-  <h2>Why Use Amapiano Hub?</h2>
-  <ul>
-    <li>✔ Discover trending Amapiano songs</li>
-    <li>✔ Explore top artists</li>
-    <li>✔ Save your favorite music</li>
-    <li>✔ Easy and clean experience</li>
-  </ul>
+<section>
+<h2>Top Artists</h2>
+<div id="artistsContainer"></div>
 </section>
 
 </main>
 
-<!-- MODAL -->
-<div id="modal" class="modal hidden">
-  <div class="modal-content">
-    <span id="close-modal">&times;</span>
-    <div id="modal-data"></div>
-  </div>
-</div>
-
 <footer>
-  <p>© 2026 Amapiano Hub | Built by Katleho</p>
+<p>© 2026 Katleho Selwana</p>
 </footer>
 
 </body>
