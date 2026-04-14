@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amapiano Hub | Songs</title>
+
+  <meta name="description" content="Browse trending Amapiano songs and discover new music.">
+  <meta name="author" content="Katleho Selwana">
+
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- IMPORTANT -->
+  <script type="module" src="scripts/songs.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Amapiano Hub 🎧</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="songs.html">Songs</a>
+    <a href="artists.html">Artists</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>🎵 Amapiano Songs</h2>
+  <p>Explore the hottest Amapiano tracks right now</p>
+</section>
+
+<!-- SONGS CONTAINER -->
+<section>
+  <h2>All Songs</h2>
+  <div id="songs-container" class="grid"></div>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal">&times;</span>
+    <div id="modal-data"></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Amapiano Hub</p>
+</footer>
+
+</body>
+</html>
